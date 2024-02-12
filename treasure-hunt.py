@@ -22,15 +22,17 @@ ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 ''')
 print("Welcome to the Treasure Island.\nYour Mission is to find the treasure.")
 direction = input("Which direction would you like to Go? choose left or right ").lower()
-swim_wait = input("Would you like to swim or you want to wait for a boat? swim or wait ").lower()
-door = input("Which color door you would like to go into? red/blue/yellow ").lower()
+
+
 
 if direction != 'left':
     print("Fall into a hole.\n Game Over!")
 else:
+    swim_wait = input("Would you like to swim or you want to wait for a boat? swim or wait ").lower()
     if swim_wait != 'wait':
         print("Attacked by trout. Game Over!")
     else:
+        door = input("Which color door you would like to go into? red/blue/yellow ").lower()
         if door == 'blue':
             print("Eaten by beasts. Game Over!")
         elif door == 'red':
