@@ -32,29 +32,21 @@ Scissors win against paper.
 Paper wins against rock.
 '''
 import random
+rps = ['rock', 'paper', 'Scissors']
+game_images = [rock, paper, scissors]
 user_input = int(input("Kindly Enter your choice?\n0 - Rock\n1 - Paper\n2 - Scissors\n"))
+computers_choice = random.randint(0,2)
+computer_choose = rps[computers_choice]
+
 if user_input > 2 or user_input < 0:
     print("You enter an invalid number and you loose ...")
 else:
-    rps = ['rock', 'paper', 'Scissors']
     print(f'User"s Choose: {rps[user_input]}')
-    if user_input == 0:
-        print(rock)
-    elif user_input == 1:
-        print(paper)
-    elif user_input == 2:
-        print(scissors)
-
-    computers_choice = random.randint(0,2)
-    computer_choose = rps[computers_choice]
+    print(game_images[user_input])
 
     print(f'Computer"s Choose: {computer_choose}')
-    if computers_choice == 0:
-        print(rock)
-    elif computers_choice == 1:
-        print(paper)
-    elif computers_choice == 2:
-        print(scissors)
+    print(game_images[computers_choice])
+
 
     if user_input == 0 and computers_choice == 2:
         print("You Win!")
